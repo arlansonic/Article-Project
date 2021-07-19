@@ -9,10 +9,11 @@ app.db = db
 
 consign()
     .then('./config/middlewares.js')
-    .then('/api')
+    .then('./api/validator.js')
+    .then('./api')
     .then('./config/routes.js')
     .into(app)
 
-app.listen(3000, () => {
+app.listen(3001, () => {
     console.log('Backend Executando....')
 })

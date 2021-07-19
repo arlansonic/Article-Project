@@ -5,7 +5,7 @@
          if (typeof value === 'string' && !value.trim()) throw msg
      }
 
-     function notExists0Error(value, msg) {
+     function notExistsOrError(value, msg) {
          try {
              existsOrError(value, msg)
          } catch (msg) {
@@ -14,9 +14,9 @@
          throw msg
      }
 
-     function equals0Error(valueA, valueB, msg) {
+     function equalsOrError(valueA, valueB, msg) {
          if (valueA !== valueB) throw msg
      }
 
-     return { existsOrError, notExists0Error, equals0Error }
+     return { existsOrError, notExistsOrError, equalsOrError }
  }

@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt-nodejs')
     // const { where } = require('../config/db')
-    // const express = require('express')
+    // const express = require('express')    
 
 module.exports = app => {
 
@@ -59,5 +59,15 @@ module.exports = app => {
 
     }
 
-    return { save, get }
+    const getById = (req, res) => {
+        app.db('users')
+            .select('id', 'name', 'email', 'admin')
+            .where({ id: req.params.id })
+            .frist()
+            .then(user => res.json(user))
+            .catch(err => res.status(500).send(err))
+
+    }
+
+    return { save, get, getById }
 }

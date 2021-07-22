@@ -19,10 +19,19 @@ module.exports = app => {
     // Arvore de Array dos Menus
     app.route('/categories/tree')
         .get(app.api.category.getTree)
-
+        // Categorias - Get - Put = Delete
     app.route('/categories/:id')
         .get(app.api.category.getById)
         .put(app.api.category.save)
         .delete(app.api.category.remove)
 
+    // Rotas para os Artigos
+    app.route('/articles')
+        .get(app.api.articles.get)
+        .post(app.api.articles.save)
+
+    app.route('/articles/:id')
+        .get(app.api.articles.getById)
+        .put(app.api.articles.save)
+        .delete(app.api.articles.remove)
 }

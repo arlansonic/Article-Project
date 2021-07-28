@@ -1,4 +1,10 @@
 module.exports = app => {
+
+    // Autenticação - Url's Publicas
+    app.post('/signup', app.api.user.save)
+    app.post('/signin', app.api.auth.signin)
+    app.post('/validateToken', app.api.auth.validateToken)
+
     // Usuario
 
     app.route('/users')

@@ -32,7 +32,7 @@ module.exports = app => {
             return res.status(400).send(msg)
         }
         // Criptografar a senha do usuario
-        user.password = encryptPassword(req.password)
+        user.password = encryptPassword(user.password) //req.password
             // Deletando a confirmação da senha no Banco de Ddos
         delete user.confirmPassword
 

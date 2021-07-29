@@ -4,8 +4,11 @@ const bcrypt = require('bcrypt-nodejs')
 
 module.exports = app => {
     const signin = async(req, res) => {
-        if (!req.body.email || !req.body.password) { //Se não for preenchido
-            return res.status(400).send('Informe seu E-mail')
+        if (!req.body.email) { //Se não for preenchido
+            return res.status(400).send('Informe Seu E-mail')
+        }
+        if (!req.body.password) {
+            return res.status(400).send('Informe Sua Senha')
         }
 
         const user = await app.db('users') //Fazer consulta no Banco
@@ -17,8 +20,9 @@ module.exports = app => {
         const isMatch = bcrypt.compareSync(req.body.password, user.password) //Validar com o User e o password para saber se é o mesmo
 
         //Se não der Match
-        if (!isMatch) return res.status(401).send('Email/Senha Invalidos!')
-
+        if (!isMatch) {
+            return res.status(401).send('Email/Senha Invalidos!')
+        }
         // Token vai ter Validade
 
         const now = Math.floor(Date.now() / 1000)

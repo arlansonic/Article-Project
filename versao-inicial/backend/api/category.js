@@ -1,5 +1,5 @@
 module.exports = app => {
-    const { existsOrError, notExistsOrError } = app.api.validator
+    const { existsOrError, notExistsOrError } = app.api.validation
 
     // Salvar - e Alterar Categoria
     const save = (req, res) => {

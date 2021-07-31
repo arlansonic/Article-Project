@@ -2,7 +2,7 @@
 const queries = require('./queries')
 
 module.exports = app => {
-    const { existsOrError } = app.api.validator
+    const { existsOrError } = app.api.validation
 
     // Salvar Artigo
     const save = (req, res) => {

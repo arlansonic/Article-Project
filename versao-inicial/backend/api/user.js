@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt-nodejs')
-    // const { where } = require('../config/db')
-    // const express = require('express')    
+const { where } = require('../config/db')
+const express = require('express')
 
 module.exports = app => {
 

@@ -3,7 +3,11 @@ module.exports = app => {
 
     // Salvar - e Alterar Categoria
     const save = (req, res) => {
-        const category = {...req.body }
+        const category = {
+                id: req.body.id,
+                name: req.body.name,
+                parentId: req.body.parentId
+            } //{...req.body }
         if (req.params.id) category.id = req.params.id
 
         try {
@@ -118,7 +122,7 @@ module.exports = app => {
 
     const getTree = (req, res) => {
         app.db('categories')
-            .then(categories => res.json(toTree(withPath(categories))))
+            .then(categories => res.json(toTree(categories)))
             .catch(err => res.status(500).send(err)) //Caso aja algum erro => 500 Lado do Servidor            
     }
 

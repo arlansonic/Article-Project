@@ -19,12 +19,12 @@ export default {
     },
     computed: {
         icon(){
-            return "fa-angle-left"
+            return this.$store.state.isMenuVisible ? "fa-angle-left" : "fa-angle-down" //Mudar os Icons quando clicar no Menu
         }
     },
     methods: {
         toggleMenu(){
-            
+            this.$store.commit('toggleMenu') //Vai chamar a função que está em Store
         }
     }
 }
@@ -69,5 +69,5 @@ export default {
         background-color: rgba(0, 0, 0, 0.2);
         cursor: pointer;
     }
-    
+   
 </style>

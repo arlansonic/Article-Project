@@ -1,6 +1,9 @@
 <template>
 	<div id="app" :class="{'hide-menu': !isMenuVisible}"> <!--Deixando Menu visivel ou não-->
-		<Header title="Project KnowLedge" :hideToggle="false"/> <!---Seta Menu-->
+		<Header title="Project KnowLedge" 
+		:hideToggle="false"
+		:hideUserDropdown="fatlse"
+		/> <!---Seta Menu-->
 		<Menu/>
 		<Content/>
 		<Footer/>

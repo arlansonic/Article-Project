@@ -1,6 +1,6 @@
 <template>
 	<div id="app">
-		<Header/>
+		<Header title="Project KnowLedge" :hideToggle="false"/>
 		<Menu/>
 		<Content/>
 		<Footer/>

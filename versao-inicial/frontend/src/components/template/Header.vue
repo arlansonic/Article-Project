@@ -5,7 +5,9 @@
       </a>
 
       <h1 class="title">
-          {{title}}
+          <router-link to="/">
+              {{title}}
+          </router-link>
       </h1>
       <UserDropdown v-if="!hideUserDropdown"/>
   </header>
@@ -50,10 +52,16 @@ export default {
         color: #fff;
         font-weight: 100;
         flex-grow: 1;
-        text-align: center;
+        text-align: center;        
+        text-decoration: none;
     }
 
     .title a{
+        color: #FFF;
+        text-decoration: none;
+    }
+
+     .title a:hover{
         color: #FFF;
         text-decoration: none;
     }
@@ -74,6 +82,7 @@ export default {
         color: #fff;
         background-color: rgba(0, 0, 0, 0.2);
         cursor: pointer;
+        text-decoration: none;
     }
    
 </style>

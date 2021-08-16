@@ -1,5 +1,10 @@
 <template>
-  <div class="content"></div>
+  <div class="content">
+      <!-- Renderizar o componente das rotas - AdminPages e o Home -->
+      <router-view>
+
+      </router-view>
+  </div>
 </template>
 
 <script>

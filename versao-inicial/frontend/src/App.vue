@@ -2,7 +2,7 @@
 	<div id="app" :class="{'hide-menu': !isMenuVisible}"> <!--Deixando Menu visivel ou não-->
 		<Header title="Project KnowLedge" 
 		:hideToggle="false"
-		:hideUserDropdown="fatlse"
+		:hideUserDropdown="false"
 		/> <!---Seta Menu-->
 		<Menu/>
 		<Content/>

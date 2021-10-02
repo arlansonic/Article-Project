@@ -13,7 +13,7 @@ import router from './config/router'
 Vue.config.productionTip = false
 
 // TEMPORARIO RETIRAR DEPOIS
-require('axios').defaults.headers.common['Authorization'] = 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NywibmFtZSI6IkFybGFuIE1hcnJlaXJvIiwiZW1haWwiOiJhcmxhbjIubWFycmVpcm9AZ21haWwuY29tIiwiYWRtaW4iOnRydWUsImlhdCI6MTYzMjUwNjQyMiwiZXhwIjoxNjMyNzY1NjIyfQ.drNIhAaXXfrETBwjpCO68MR0g5f3SvIkRJ0nyveXuqo'
+require('axios').defaults.headers.common['Authorization'] = 'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NSwibmFtZSI6IkFybGFuIE1hcnJlaXJvIGRlIFNvdXphIE5hc2NpbWVudG8iLCJlbWFpbCI6ImFybGFuLm1hcnJlaXJvQGdtYWlsLmNvbSIsImFkbWluIjp0cnVlLCJpYXQiOjE2MzMxODQyNTksImV4cCI6MTYzMzQ0MzQ1OX0.yXBWL0zSF7xtbakCP-A4od-0OX7JUB3lViprAjvP4zM'
     // Token User: arlan.marreiro@gmail.com 
 
 new Vue({

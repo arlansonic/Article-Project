@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import PageTitle from '../template/PageTitle'
-import Stat from './Stat'
+import PageTitle from '../template/PageTitle.vue'
+import Stat from './Stat.vue'
 import axios from 'axios'
 import {baseApiUrl} from '@/global'
 

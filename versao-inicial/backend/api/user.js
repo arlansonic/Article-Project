@@ -11,15 +11,13 @@ module.exports = app => {
         return bcrypt.hashSync(password, salt)
     }
 
-
-
     const save = async(req, res) => {
         const user = {...req.body }
         if (req.params.id) user.id = req.params.id
 
         // Validação para permitir que somente o Administrador possa cadastrar outro Adminitrador
-        if (!req.originalUrl.startWith('/users')) user.admin = false
-        if (!req.user || !req.user.admin) user.admin = true
+        if (!req.originalUrl.startsWith('/users')) user.admin = false
+        if (!req.user || !req.user.admin) user.admin = false
 
         try {
             existsOrError(user.name, 'Nome não informado!')

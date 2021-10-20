@@ -78,7 +78,7 @@
     <!-- Botões para Alterar e Excluir -->
     <b-table hover striped :items="users" :fields="fields">
       <template slot="actions" slot-scope="data">
-        <b-button variant="warning" @click="loadUser(data.item)" class="mr-2" >
+        <b-button variant="warning" @click="loadUser(data.item)" class="mr-2">
           <i class="fa fa-pencil"></i>
         </b-button>
         <b-button variant="danger" @click="loadUser(data.item, 'remove')">
@@ -127,12 +127,12 @@ export default {
       this.loadUsers();
     },
     save() {
-      const method = this.user.id ? 'put' : 'post'
-      const id = this.user.id ? `/${this.user.id}` : ''
+      const method = this.user.id ? "put" : "post";
+      const id = this.user.id ? `/${this.user.id}` : "";
       axios[method](`${baseApiUrl}/users${id}`, this.user)
         .then(() => {
-          this.$toasted.global.defaultSuccess()
-          this.reset()
+          this.$toasted.global.defaultSuccess();
+          this.reset();
         })
         .catch(showError);
     },
@@ -146,10 +146,10 @@ export default {
         })
         .catch(showError);
     },
-    loadUser(user, mode = 'save'){
-      this.mode = mode
-      this.user = {...user}
-    }
+    loadUser(user, mode = "save") {
+      this.mode = mode;
+      this.user = { ...user };
+    },
   },
   mounted() {
     this.loadUsers();

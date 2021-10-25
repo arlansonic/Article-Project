@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 // @ importar com Caminho Relativo
 import Home from '@/components/home/Home'
 import AdminPages from '@/components/admin/AdminPages'
+import ArticlesByCategory from '@/components/article/ArticlesByCategory'
 
 Vue.use(VueRouter) //Usar para Carregar os Imports
 
@@ -16,6 +17,11 @@ const routes = [{
     name: 'adminPages',
     path: '/admin',
     component: AdminPages
+}, {
+    // Pegando a Categoria dos Artigos
+    name: 'articlesByCategory',
+    path: '/categories/:id/articles',
+    component: ArticlesByCategory
 }]
 
 // Estanciar o VueRouter

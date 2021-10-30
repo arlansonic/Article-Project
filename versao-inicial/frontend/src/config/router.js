@@ -5,7 +5,9 @@ import VueRouter from 'vue-router'
 import Home from '@/components/home/Home'
 import AdminPages from '@/components/admin/AdminPages'
 import ArticlesByCategory from '@/components/article/ArticlesByCategory'
+import ArticleByid from '@/components/article/ArticleByid'
 
+// Rotas
 Vue.use(VueRouter) //Usar para Carregar os Imports
 
 const routes = [{
@@ -22,6 +24,10 @@ const routes = [{
     name: 'articlesByCategory',
     path: '/categories/:id/articles',
     component: ArticlesByCategory
+}, {
+    name: 'articleById',
+    path: '/articles/:id',
+    component: ArticleByid
 }]
 
 // Estanciar o VueRouter

@@ -3,7 +3,7 @@
 		<Header title="Project KnowLedge" 
 		:hideToggle="!user"
 		:hideUserDropdown="!user"/> <!---Seta Menu-->
-		<Menu v-if="!user"/>
+		<Menu v-if="user"/>
 		<Content/>
 		<Footer/>
 	</div>

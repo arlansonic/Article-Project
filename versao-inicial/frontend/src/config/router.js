@@ -6,6 +6,7 @@ import Home from '@/components/home/Home'
 import AdminPages from '@/components/admin/AdminPages'
 import ArticlesByCategory from '@/components/article/ArticlesByCategory'
 import ArticleByid from '@/components/article/ArticleByid'
+import Auth from '@/components/auth/Auth'
 
 // Rotas
 Vue.use(VueRouter) //Usar para Carregar os Imports
@@ -28,6 +29,10 @@ const routes = [{
     name: 'articleById',
     path: '/articles/:id',
     component: ArticleByid
+}, {
+    name: 'auth',
+    path: '/auth',
+    component: Auth
 }]
 
 // Estanciar o VueRouter
